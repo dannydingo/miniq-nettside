@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#176946">
+  <meta name="description" content="Finn fem forskjeller i bildene fra skogspikniken med Jo og GG.">
+  <title>Finn 5 feil – MiniQ</title>
+  <link rel="stylesheet" href="spill.css">
+  <link rel="stylesheet" href="feiring.css">
+  <script src="feiring.js" defer></script>
+  <script src="finn-5-feil-data.js" defer></script>
+  <script src="finn-5-feil.js" defer></script>
+</head>
+<body>
+  <header class="page-header">
+    <div class="header-inner">
+      <a href="index.html" aria-label="MiniQ hjem"><img src="logo.png" alt="MiniQ" width="132" height="57"></a>
+      <a class="back-link" href="spill.html">Tilbake til spill</a>
+    </div>
+  </header>
+  <main class="wrap">
+    <section class="difference-game" aria-labelledby="game-title">
+      <div class="game-intro">
+        <div>
+          <h1 id="game-title">Finn 5 feil</h1>
+          <p>Se nøye på begge bildene. Trykk der du finner en forskjell.</p>
+        </div>
+        <div class="progress">
+          <strong id="difference-score">0 av 5 funnet</strong>
+          <div class="progress-dots" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+        </div>
+      </div>
+      <div class="challenge-picker">
+        <div class="challenge-summary">
+          <h2>Velg en oppgave</h2>
+          <span id="challenge-progress"></span>
+        </div>
+        <div class="challenge-options" id="challenge-options" role="group" aria-label="Oppgaver"></div>
+      </div>
+      <div class="picture-controls">
+        <h2 id="challenge-title" tabindex="-1">Skogspiknik</h2>
+        <button id="hint" class="game-button" type="button">Få et hint</button>
+        <button id="restart" class="game-button" type="button">Spill igjen</button>
+        <p id="game-message" role="status" aria-atomic="true"></p>
+      </div>
+      <div class="victory" id="victory" hidden>
+        <span class="victory-badge" aria-hidden="true">⭐</span>
+        <div class="victory-copy">
+          <strong id="victory-title"></strong>
+          <p id="victory-message"></p>
+        </div>
+        <button id="next-challenge" class="game-button next-challenge" type="button" hidden>Neste oppgave</button>
+      </div>
+      <div class="picture-pair">
+        <figure>
+          <figcaption>Første bilde</figcaption>
+          <div class="scene" id="scene-a">
+            <img src="finn-5-feil/skogstur-a.webp" alt="Jo og GG på piknik i skogen." width="1020" height="680" draggable="false">
+          </div>
+        </figure>
+        <figure>
+          <figcaption>Andre bilde</figcaption>
+          <div class="scene" id="scene-b">
+            <img src="finn-5-feil/skogstur-b.webp" alt="Samme piknik med fem forskjeller." width="1020" height="680" draggable="false">
+          </div>
+        </figure>
+      </div>
+      <noscript><p>Slå på JavaScript i nettleseren for å spille.</p></noscript>
+    </section>
+  </main>
+</body>
+</html>

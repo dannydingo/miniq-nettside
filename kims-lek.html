@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#176946">
+  <meta name="description" content="Spill Kims lek med Jo og GG. Se på tingene og gjett hva som ble borte.">
+  <title>Kims lek – MiniQ</title>
+  <link rel="stylesheet" href="spill.css">
+  <link rel="stylesheet" href="feiring.css">
+  <link rel="stylesheet" href="kims-lek.css">
+  <script src="feiring.js" defer></script>
+  <script src="kims-lek.js" defer></script>
+</head>
+<body>
+  <header class="page-header">
+    <div class="header-inner">
+      <a href="index.html" aria-label="MiniQ hjem"><img src="logo.png" alt="MiniQ" width="132" height="57"></a>
+      <a class="back-link" href="spill.html">Tilbake til spill</a>
+    </div>
+  </header>
+  <main class="wrap kim-wrap">
+    <section class="difference-game" aria-labelledby="game-title">
+      <div class="game-intro">
+        <div>
+          <h1 id="game-title">Kims lek</h1>
+          <p>Se på tingene. Husker du hvilken som blir borte?</p>
+        </div>
+        <div class="kim-friends" aria-label="Jo og GG">
+          <img src="memory-assets/jo.webp" alt="" width="64" height="64">
+          <img src="memory-assets/gg.webp" alt="" width="64" height="64">
+        </div>
+      </div>
+      <div class="kim-game" id="kim-game" hidden>
+        <div class="kim-top">
+          <span id="kim-round"></span>
+          <div class="kim-stars" id="kim-stars" aria-hidden="true"></div>
+        </div>
+        <div id="kim-play">
+          <h2 id="kim-prompt" tabindex="-1"></h2>
+          <ul class="kim-tray" id="kim-tray" aria-label="Tingene på brettet"></ul>
+          <div class="kim-choices" id="kim-choices" role="group" aria-label="Velg tingen som ble borte" hidden></div>
+        </div>
+        <div class="victory victory-finale kim-victory" id="kim-victory" hidden>
+          <span class="victory-badge" aria-hidden="true">🏆</span>
+          <div class="victory-copy">
+            <strong id="kim-win-title" tabindex="-1">Hurra! Du klarte hele Kims lek!</strong>
+            <p>Du fant tingen som ble borte i alle fem rundene. Jo og GG feirer med deg!</p>
+          </div>
+        </div>
+        <p class="kim-feedback" id="kim-feedback" role="status" aria-atomic="true"></p>
+        <button class="game-button kim-action" id="kim-action" type="button"></button>
+      </div>
+      <noscript><p class="kim-game">Slå på JavaScript i nettleseren for å spille.</p></noscript>
+    </section>
+  </main>
+</body>
+</html>

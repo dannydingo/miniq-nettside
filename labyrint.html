@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#176946">
+  <meta name="description" content="Hjelp Jo og GG gjennom tre labyrinter i MiniQ. Finn veien, samle bær og let etter en nøkkel.">
+  <title>Labyrint med Jo og GG – MiniQ</title>
+  <link rel="stylesheet" href="spill.css">
+  <link rel="stylesheet" href="feiring.css">
+  <link rel="stylesheet" href="labyrint.css">
+  <script src="feiring.js" defer></script>
+  <script src="labyrint.js" defer></script>
+</head>
+<body>
+  <header class="page-header">
+    <div class="header-inner">
+      <a href="index.html" aria-label="MiniQ hjem"><img src="logo.png" alt="MiniQ" width="132" height="57"></a>
+      <a class="back-link" href="spill.html">Tilbake til spill</a>
+    </div>
+  </header>
+  <main class="wrap maze-wrap">
+    <section class="difference-game" aria-labelledby="game-title">
+      <div class="game-intro">
+        <div>
+          <h1 id="game-title">Labyrint med Jo og GG</h1>
+          <p>Finn veien gjennom tre labyrinter.</p>
+        </div>
+        <strong id="maze-total" hidden></strong>
+      </div>
+      <div class="maze-game" id="maze-game" hidden>
+        <div class="maze-levels" id="maze-levels" role="group" aria-label="Velg en labyrint"></div>
+        <div class="maze-layout">
+          <div class="maze-board" id="maze-board" aria-hidden="true"></div>
+          <div class="maze-side">
+            <div>
+              <h2 id="maze-title" tabindex="-1"></h2>
+              <p id="maze-task"></p>
+              <p class="maze-items" id="maze-items" hidden></p>
+            </div>
+            <div>
+              <p class="maze-feedback" id="maze-feedback" role="status" aria-atomic="true"></p>
+              <p class="maze-visually-hidden" id="maze-position"></p>
+              <div class="maze-pad" id="maze-pad" role="group" aria-label="Styr i labyrinten" aria-describedby="maze-position">
+                <button class="game-button maze-up" data-direction="up" type="button" aria-label="Opp">↑</button>
+                <button class="game-button maze-left" data-direction="left" type="button" aria-label="Venstre">←</button>
+                <button class="game-button maze-down" data-direction="down" type="button" aria-label="Ned">↓</button>
+                <button class="game-button maze-right" data-direction="right" type="button" aria-label="Høyre">→</button>
+              </div>
+              <p class="maze-help">Bruk knappene, piltastene eller trykk på ruten ved siden av figuren.</p>
+              <button class="game-button maze-reset" id="maze-reset" type="button">Start på nytt</button>
+            </div>
+          </div>
+        </div>
+        <div class="victory" id="maze-victory" hidden>
+          <span class="victory-badge" aria-hidden="true">⭐</span>
+          <div class="victory-copy">
+            <strong id="maze-win-title"></strong>
+            <p id="maze-win-copy"></p>
+          </div>
+          <button class="game-button next-challenge" id="maze-next" type="button">Neste labyrint</button>
+        </div>
+      </div>
+      <noscript><p class="maze-game">Slå på JavaScript i nettleseren for å spille.</p></noscript>
+    </section>
+  </main>
+</body>
+</html>
